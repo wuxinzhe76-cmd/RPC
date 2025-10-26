@@ -1,6 +1,6 @@
 package com.charles.netty.init;
 
-import com.charles.netty.Constant.Constants;
+import com.charles.netty.constant.Constants;
 import com.charles.netty.factory.ZookeeperFactory;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -32,6 +32,7 @@ public class NettyInitial implements ApplicationListener<ContextRefreshedEvent> 
                 .channel(NioServerSocketChannel.class)//bind NioServerSocketChannel.
                 .childHandler(new NettyServerInitializer());
             ChannelFuture future = bootstrap.bind(8080).sync();
+            int port = 8080;
             CuratorFramework client = ZookeeperFactory.create();
             InetAddress inetAddress = InetAddress.getLocalHost();
             try {
@@ -40,7 +41,8 @@ public class NettyInitial implements ApplicationListener<ContextRefreshedEvent> 
             } catch (Exception deleteException) {
                 // 如果节点不存在，忽略异常
             }
-            client.create().withMode(CreateMode.EPHEMERAL).forPath(Constants.ZK_PATH+inetAddress.getHostAddress());
+            // 创建节点
+            client.create().withMode(CreateMode.EPHEMERAL_SEQUENTIAL).forPath(Constants.ZK_PATH+inetAddress.getHostAddress()+"#"+port+"#");
             future.channel().closeFuture().sync();
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,12 +1,11 @@
 package com.charles.netty.client;
 
-import com.charles.netty.Constant.Constants;
+import com.charles.netty.constant.Constants;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.util.AttributeKey;
 
 public class NettyClient {
     public static void main(String[] args) {

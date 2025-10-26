@@ -1,7 +1,7 @@
 package com.charles.netty.client;
 
 import com.alibaba.fastjson.JSONObject;
-import com.charles.netty.Constant.Constants;
+import com.charles.netty.constant.Constants;
 import com.charles.netty.util.Response;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

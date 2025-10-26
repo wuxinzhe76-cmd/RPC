@@ -5,6 +5,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../pro-netty-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/../pro-user-api/pom.xml" />
+        <option value="$PROJECT_DIR$/../pro-user-core/pom.xml" />
       </list>
     </option>
   </component>

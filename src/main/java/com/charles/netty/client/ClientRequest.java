@@ -1,7 +1,5 @@
 package com.charles.netty.client;
 
-import com.charles.user.bean.User;
-
 import java.util.concurrent.atomic.AtomicLong;
 
 public class ClientRequest {

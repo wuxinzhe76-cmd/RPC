@@ -1,4 +1,4 @@
-package com.charles.netty.Constant;
+package com.charles.netty.constant;
 
 import io.netty.util.AttributeKey;
 

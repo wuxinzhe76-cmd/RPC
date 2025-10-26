@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.charles.netty.handler.param.ServerRequest;
 import com.charles.netty.util.Response;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;

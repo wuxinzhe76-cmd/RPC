@@ -11,7 +11,8 @@ import io.netty.handler.codec.string.StringEncoder;
 public class NettyClientInitializer extends ChannelInitializer {
     @Override
     protected void initChannel(Channel channel) throws Exception {
-        channel.pipeline().addLast(new DelimiterBasedFrameDecoder(Integer.MAX_VALUE, Delimiters.lineDelimiter()[0]))
+        channel.pipeline()
+                .addLast(new DelimiterBasedFrameDecoder(Integer.MAX_VALUE, Delimiters.lineDelimiter()[0]))
                 .addLast(new StringDecoder())
                 .addLast(new SimpleClientHandler())
                 .addLast(new StringEncoder());

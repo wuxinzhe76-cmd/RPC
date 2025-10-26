@@ -6,7 +6,7 @@ import com.charles.netty.util.Response;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
-import static com.charles.netty.Constant.Constants.CLIENT_KEY;
+import static com.charles.netty.constant.Constants.CLIENT_KEY;
 
 public class SimpleClientHandler extends ChannelInboundHandlerAdapter {
     @Override

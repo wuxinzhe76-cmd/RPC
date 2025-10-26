@@ -1,6 +1,6 @@
 package com.charles.netty.server;
 
-import com.charles.netty.Constant.Constants;
+import com.charles.netty.constant.Constants;
 import com.charles.netty.factory.ZookeeperFactory;
 import com.charles.netty.init.NettyServerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
