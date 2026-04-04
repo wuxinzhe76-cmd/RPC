@@ -70,7 +70,11 @@
             <artifactId>spring-test</artifactId>
             <version>4.3.7.RELEASE</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.esotericsoftware</groupId>
+            <artifactId>kryo</artifactId>
+            <version>5.5.0</version>
+        </dependency>
     </dependencies>
 
 </project>
